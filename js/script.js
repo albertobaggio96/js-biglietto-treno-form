@@ -28,6 +28,21 @@ buttonCalculator.addEventListener("click", function(){
     console.log("Prezzo per over 65", ticketCost);
   }
 
+  const name = document.getElementById("name").value;
+  const surname = document.getElementById("surname").value;
+  const startFrom= document.getElementById("start").value;
+
   // scrittura nel DOM il costo del biglietto per il passeggero
-  document.querySelector("p").innerHTML= `Il tuo biglietto costa ${ticketCost.toFixed(2)}`;
+  document.querySelector("p").classList.add("d-none");
+  document.querySelector("div.d-none").classList.remove("d-none")
+
+  document.querySelector("span.your-name").innerHTML= `${name}`;
+  document.querySelector("span.your-surname").innerHTML= `${surname}`;
+  document.querySelector("span.your-age").innerHTML= `${yourAge}`;
+  document.querySelector("span.strat-from").innerHTML= `${startFrom}`;
+  document.querySelector("span.my-km").innerHTML= `${kmToGo}`;
+  document.querySelector("span.my-price").innerHTML= `${ticketCost.toFixed(2)}`;
+
+
 })
+
