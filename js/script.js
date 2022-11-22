@@ -1,7 +1,9 @@
 const euroKm = 0.2762;
 
+const buttonCalculator = document.querySelector("button");
+
+buttonCalculator.addEventListener("click", function(){
 const kmToGo = parseInt(document.querySelector("input#km").value);
-// kmToGo = parseInt(kmToGo)
 console.log("km", kmToGo);
 
 const yourAge = parseInt(document.querySelector("input#age").value);
@@ -10,9 +12,6 @@ console.log("age", yourAge);
 let ticketCost = euroKm * kmToGo;
 console.log("prezzo intero", ticketCost);
 
-const buttonCalculator = document.querySelector("button");
-
-buttonCalculator.addEventListener("click", function(){
   if(yourAge < 18){
     ticketCost *= 0.825;
     console.log("Prezzo per minorenni", ticketCost);
